@@ -1,0 +1,77 @@
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0%;
+    background-color: blue;
+}
+
+.main-nav img{
+    width: 45%;
+    height: 85%;
+    max-width: 100%;
+}
+
+div#header-section{
+    text-align: right;
+    font-size: 120%;
+}
+
+ul#nav-list{
+    list-style: none;
+    padding-top: 2%;
+    padding-left: 0%;
+}
+
+ul#nav-list li, ul#nav-list a{
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color: white;
+    font-weight: bolder;
+}
+
+ul#nav-list a:nth-last-child(1){
+    border: 2px solid red;
+    border-radius: 8px;
+    margin-right: 0.2vw;
+    background-color: red;
+}
+
+div#main-section{
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    color: red;
+    font-size: 600%;
+    height: 100vh;
+    text-align: center;
+}
+
+div#side-section{
+    background-color: blue;
+}
+
+div#meme{
+    background-image: url('../images/meme.jpg');
+    font-size: 500%;
+    background-size: contain;
+    text-align: center;
+    height: 200vh;
+    color: red;
+}
+
+.featured-title{
+    background-color: blue;
+    color: red;
+    text-align: center;
+    padding-top: 2.5%;
+}
+
+.featured{
+    background-color: blue;
+    display: flex;
+    padding-left: 0%;
+    align-content: center;
+    padding-top: 1.5%;
+    text-align: center;
+    color: red;
+}

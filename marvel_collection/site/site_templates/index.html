@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+            {% for cat,msg in messages %}
+                {% if cat == 'user-created' %}
+                    <div class="alert alert-success">
+                        {{ msg }}
+                        <button type="button" class="close" data-dismiss='alert'>&times;</button>
+                    </div>
+                {% elif cat == 'auth-success' %}
+                    <div class="alert alert-sucess">
+                        {{ msg }}
+                        <button type="button" class="close" data-dismiss='alert'>&times;</button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %} 
+</div>
+
+<div class="main">
+    <header class="row">
+        <div class="col-12 col-md-1" id="side-section">
+        </div>
+        <div class="col-12 col-md-10" id="main-section">
+            <p>Who Is Your <b>HERO?</b></p>
+        </div>
+        <div class="col-12 col-md-1" id="side-section">
+        </div>
+    </header>
+</div>
+
+<div class="featured-title">
+    <h2>Featured Heroes of the Week</h2>
+</div>
+
+<div class="featured">
+    <div class="col-12 col-md-1" id="side-section">
+    </div>
+    <div class="col-12 col-md">
+        <img src="../../static/images/falcon.jpg" alt="Falcon">
+        <h4>Falcon</h4>
+    </div>
+    <div class="col-12 col-md">
+        <img src="../../static/images/black-widow.jpg" alt="Black Widow">
+        <h4>Black Widow</h4>
+    </div>
+    <div class="col-12 col-md">
+        <img src="../../static/images/winter-soldier.jpg" alt="Winter-Soldier">
+        <h4>Winter-Soldier</h4>
+    </div>
+    <div class="col-12 col-md-1" id="side-section">
+    </div>
+</div>
+
+{% endblock content %}
